@@ -9,12 +9,16 @@ function App() {
 
   useEffect(() => {
     tg.ready();
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onClose = () => {
     tg.close();
   };
+
+  tg.MainButton.text = "Закрыть";
+  tg.MainButton.show();
 
   return (
     <div className="App">
