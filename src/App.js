@@ -3,6 +3,7 @@ import "./App.css";
 import Button from "./components/Button/Button";
 import Header from "./components/Header/Header";
 import { useTelegram } from "./hooks/useTelegram";
+import { ReactComponent as Logo } from "./logo-header.svg";
 
 function App() {
   const { /* onToggleButton, */ tg } = useTelegram();
@@ -23,8 +24,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <Button onClick={onClose}>Close</Button>
+      {/*  <Header />
+      <Button onClick={onClose}>Close</Button> */}
+
+      <div className="wrapper">
+        <Logo style={{ fill: "white" }} />
+        <h1>Сергей</h1>
+      </div>
     </div>
   );
 }

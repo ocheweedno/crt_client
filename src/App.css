@@ -8,3 +8,9 @@ body {
   background: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
 }
+
+.wrapper {
+  border: 1px solid red;
+  background: #92bd72;
+  height: 100vh;
+}
