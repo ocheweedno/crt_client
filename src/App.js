@@ -19,6 +19,7 @@ function App() {
 
   tg.MainButton.text = "Закрыть";
   tg.MainButton.show();
+  tg.MainButton.onClick(() => tg.close());
 
   return (
     <div className="App">
