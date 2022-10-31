@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./App.css";
-import Button from "./components/Button/Button";
-import Header from "./components/Header/Header";
+/* import Button from "./components/Button/Button";
+import Header from "./components/Header/Header"; */
 import { useTelegram } from "./hooks/useTelegram";
 import { ReactComponent as Logo } from "./logo-header.svg";
 
@@ -14,9 +14,9 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const onClose = () => {
+  /* const onClose = () => {
     tg.close();
-  };
+  }; */
 
   tg.MainButton.text = "Закрыть";
   tg.MainButton.show();
