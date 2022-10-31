@@ -3,7 +3,8 @@ import "./App.css";
 /* import Button from "./components/Button/Button";
 import Header from "./components/Header/Header"; */
 import { useTelegram } from "./hooks/useTelegram";
-import { ReactComponent as Logo } from "./logo-header.svg";
+import { ReactComponent as LogoRzn } from "./logo-rzn.svg";
+import { ReactComponent as LogoSqe } from "./logo-sqe.svg";
 
 function App() {
   const { /* onToggleButton, */ tg } = useTelegram();
@@ -24,12 +25,18 @@ function App() {
 
   return (
     <div className="App">
-      {/*  <Header />
-      <Button onClick={onClose}>Close</Button> */}
-
       <div className="wrapper">
-        <Logo style={{ fill: "white" }} />
-        <h1>Сергей</h1>
+        <div>
+          <LogoRzn />
+        </div>
+        <div className="icon-way">
+          <div className="title">Выгодный путь</div>
+          <LogoSqe />
+        </div>
+        <div>
+          <h1 style={{ color: "white", fontSize: "36px" }}>Карта гостя</h1>
+        </div>
+        <div>Сергей</div>
       </div>
     </div>
   );

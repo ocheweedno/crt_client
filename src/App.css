@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Suisse Int'l", "Arial", sans-serif;
 }
 
 body {
@@ -13,4 +14,19 @@ body {
   border: 1px solid red;
   background: #92bd72;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.icon-way {
+  color: white;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  left: 58px;
+  top: 24px;
 }
