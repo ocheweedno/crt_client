@@ -7,7 +7,7 @@ import { ReactComponent as LogoRzn } from "./logo-rzn.svg";
 import { ReactComponent as LogoSqe } from "./logo-sqe.svg";
 
 function App() {
-  const { /* onToggleButton, */ tg } = useTelegram();
+  const { /* onToggleButton, */ tg, userId, photo } = useTelegram();
 
   useEffect(() => {
     tg.ready();
@@ -37,6 +37,8 @@ function App() {
           <h1 style={{ color: "white", fontSize: "36px" }}>Карта гостя</h1>
         </div>
         <div>Сергей</div>
+        <div>{userId}</div>
+        <div>{photo}</div>
       </div>
     </div>
   );
