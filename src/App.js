@@ -26,10 +26,10 @@ function App() {
   return (
     <div className="App">
       <div className="wrapper">
-        <div>
+        <div style={{ marginTop: "100px", marginBottom: "20px" }}>
           <LogoRzn />
         </div>
-        <div className="icon-way">
+        <div className="icon-way" style={{ marginBottom: "20px" }}>
           <div className="title">Выгодный путь</div>
           <LogoSqe />
         </div>
