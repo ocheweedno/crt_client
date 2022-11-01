@@ -3,14 +3,14 @@ import "./App.css";
 import { useTelegram } from "./hooks/useTelegram";
 import { ReactComponent as LogoRzn } from "./logo-rzn.svg";
 import { ReactComponent as LogoSqe } from "./logo-sqe.svg";
-import { useSearchParams } from "react-router-dom";
+/* import { useSearchParams } from "react-router-dom"; */
 
 function App() {
   const { tg } = useTelegram();
 
-  const [searchParams] = useSearchParams();
+  /*   const [searchParams] = useSearchParams(); */
 
-  const name = searchParams.get("name");
+  /*   const name = searchParams.get("name"); */
 
   useEffect(() => {
     tg.ready();
@@ -47,7 +47,7 @@ function App() {
           <h1
             style={{ color: "white", fontSize: "36px", marginBottom: "20px" }}
           >
-            {name}
+            test
           </h1>
         </div>
       </div>
