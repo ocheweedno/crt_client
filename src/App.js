@@ -1,13 +1,14 @@
 import { useEffect } from "react";
 import "./App.css";
-/* import Button from "./components/Button/Button";
-import Header from "./components/Header/Header"; */
 import { useTelegram } from "./hooks/useTelegram";
 import { ReactComponent as LogoRzn } from "./logo-rzn.svg";
 import { ReactComponent as LogoSqe } from "./logo-sqe.svg";
 
 function App() {
-  const { /* onToggleButton, */ tg, userId, photo } = useTelegram();
+  const { tg } = useTelegram();
+
+  let params = new URL(document.location).searchParams;
+  let name = params.get("name");
 
   useEffect(() => {
     tg.ready();
@@ -34,11 +35,15 @@ function App() {
           <LogoSqe />
         </div>
         <div>
-          <h1 style={{ color: "white", fontSize: "36px" }}>Карта гостя</h1>
+          <h1
+            style={{ color: "white", fontSize: "36px", marginBottom: "20px" }}
+          >
+            Карта гостя
+          </h1>
         </div>
-        <div>Сергей</div>
-        <div>{userId}</div>
-        <div>{photo}</div>
+        <div>
+          <h1 style={{ color: "white", fontSize: "36px" }}>{name}</h1>
+        </div>
       </div>
     </div>
   );
