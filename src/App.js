@@ -1,13 +1,16 @@
 import { useEffect } from "react";
 import "./App.css";
-/* import Button from "./components/Button/Button";
-import Header from "./components/Header/Header"; */
 import { useTelegram } from "./hooks/useTelegram";
 import { ReactComponent as LogoRzn } from "./logo-rzn.svg";
 import { ReactComponent as LogoSqe } from "./logo-sqe.svg";
+import { useSearchParams } from "react-router-dom";
 
 function App() {
-  const { /* onToggleButton, */ tg, userId, photo } = useTelegram();
+  const { tg, userId } = useTelegram();
+
+  const [searchParams] = useSearchParams();
+
+  const name = searchParams.get("name");
 
   useEffect(() => {
     tg.ready();
@@ -36,9 +39,8 @@ function App() {
         <div>
           <h1 style={{ color: "white", fontSize: "36px" }}>Карта гостя</h1>
         </div>
-        <div>Сергей</div>
+        <div>{name}</div>
         <div>{userId}</div>
-        <div>{photo}</div>
       </div>
     </div>
   );
