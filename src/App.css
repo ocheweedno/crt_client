@@ -5,10 +5,10 @@
   font-family: "Suisse Int'l", "Arial", sans-serif;
 }
 
-/* body {
+body {
   background: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
-} */
+}
 
 .wrapper {
   background: #92bd72;
