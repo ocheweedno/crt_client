@@ -11,10 +11,12 @@ body {
 }
 
 .wrapper {
+  border: 1px solid red;
   background: #92bd72;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
   justify-items: center;
   align-items: center;
 }
@@ -22,6 +24,7 @@ body {
   color: white;
   position: relative;
 }
+
 .title {
   position: absolute;
   left: 58px;
