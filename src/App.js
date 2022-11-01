@@ -43,7 +43,13 @@ function App() {
             Карта гостя
           </h1>
         </div>
-        <div style={{ color: "white", fontSize: "36px" }}>{name}</div>
+        <div>
+          <h1
+            style={{ color: "white", fontSize: "36px", marginBottom: "20px" }}
+          >
+            {name}
+          </h1>
+        </div>
       </div>
     </div>
   );
