@@ -5,18 +5,16 @@
   font-family: "Suisse Int'l", "Arial", sans-serif;
 }
 
-body {
+/* body {
   background: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
-}
+} */
 
 .wrapper {
-  border: 1px solid red;
   background: #92bd72;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   justify-items: center;
   align-items: center;
 }
