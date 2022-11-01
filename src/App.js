@@ -6,7 +6,7 @@ import { ReactComponent as LogoSqe } from "./logo-sqe.svg";
 import { useSearchParams } from "react-router-dom";
 
 function App() {
-  const { tg, userId } = useTelegram();
+  const { tg } = useTelegram();
 
   const [searchParams] = useSearchParams();
 
@@ -37,10 +37,13 @@ function App() {
           <LogoSqe />
         </div>
         <div>
-          <h1 style={{ color: "white", fontSize: "36px" }}>Карта гостя</h1>
+          <h1
+            style={{ color: "white", fontSize: "36px", marginBottom: "20px" }}
+          >
+            Карта гостя
+          </h1>
         </div>
-        <div>{name}</div>
-        <div>{userId}</div>
+        <div style={{ color: "white", fontSize: "36px" }}>{name}</div>
       </div>
     </div>
   );
