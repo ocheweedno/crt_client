@@ -1,23 +1,22 @@
 import { useEffect } from "react";
 import "./App.css";
-/* import Button from "./components/Button/Button";
-import Header from "./components/Header/Header"; */
 import { useTelegram } from "./hooks/useTelegram";
 import { ReactComponent as LogoRzn } from "./logo-rzn.svg";
 import { ReactComponent as LogoSqe } from "./logo-sqe.svg";
+import { useSearchParams } from "react-router-dom";
 
 function App() {
-  const { /* onToggleButton, */ tg, userId, photo } = useTelegram();
+  const { tg, user } = useTelegram();
+
+  const [searchParams] = useSearchParams();
+
+  const name = searchParams.get("name");
 
   useEffect(() => {
     tg.ready();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  /* const onClose = () => {
-    tg.close();
-  }; */
 
   tg.MainButton.text = "Закрыть";
   tg.MainButton.show();
@@ -34,11 +33,14 @@ function App() {
           <LogoSqe />
         </div>
         <div>
-          <h1 style={{ color: "white", fontSize: "36px" }}>Карта гостя</h1>
+          <h1
+            style={{ color: "white", fontSize: "36px", marginBottom: "20px" }}
+          >
+            Карта гостя
+          </h1>
         </div>
-        <div>Сергей</div>
-        <div>{userId}</div>
-        <div>{photo}</div>
+        <div style={{ color: "white", fontSize: "36px" }}>{name}</div>
+        <div>{user}</div>
       </div>
     </div>
   );
