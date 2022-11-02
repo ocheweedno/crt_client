@@ -17,9 +17,6 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  /* const onClose = () => {
-    tg.close();
-  }; */
   tg.expand();
   tg.MainButton.text = "Закрыть";
   tg.MainButton.show();
@@ -52,7 +49,7 @@ function App() {
         <div>
           <img src={require("./images/code.png")} />
         </div>
-        <div style={{ marginTop: "160px" }}>
+        <div style={{ marginTop: "100px" }}>
           <p>{userId}</p>
         </div>
       </div>
