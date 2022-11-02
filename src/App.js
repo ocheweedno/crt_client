@@ -20,7 +20,7 @@ function App() {
   /* const onClose = () => {
     tg.close();
   }; */
-
+  tg.expand();
   tg.MainButton.text = "Закрыть";
   tg.MainButton.show();
   tg.MainButton.onClick(() => tg.close());
