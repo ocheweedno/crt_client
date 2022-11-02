@@ -46,12 +46,13 @@ function App() {
             {name}
           </h1>
         </div>
+        <p>userId - {userId}</p>
         <div>
           <img src={require("./images/code.png")} />
         </div>
-        <div style={{ marginTop: "100px" }}>
+        {/* <div style={{ marginTop: "100px" }}>
           <p>{userId}</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
