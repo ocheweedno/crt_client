@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { useEffect } from "react";
 import "./App.css";
 import { useTelegram } from "./hooks/useTelegram";
@@ -5,7 +6,7 @@ import { ReactComponent as LogoRzn } from "./logo-rzn.svg";
 import { ReactComponent as LogoSqe } from "./logo-sqe.svg";
 
 function App() {
-  const { tg } = useTelegram();
+  const { tg, userId } = useTelegram();
 
   let params = new URL(document.location).searchParams;
   let name = params.get("name");
@@ -42,7 +43,17 @@ function App() {
           </h1>
         </div>
         <div>
-          <h1 style={{ color: "white", fontSize: "36px" }}>{name}</h1>
+          <h1
+            style={{ color: "white", fontSize: "36px", marginBottom: "20px" }}
+          >
+            {name}
+          </h1>
+        </div>
+        <div>
+          <img src={require("./images/code.png")} />
+        </div>
+        <div style={{ marginTop: "160px" }}>
+          <p>{userId}</p>
         </div>
       </div>
     </div>
